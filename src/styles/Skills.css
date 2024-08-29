@@ -1,0 +1,10 @@
+.skills {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skills h2 {
+  font-size: 1.5rem;
+}
