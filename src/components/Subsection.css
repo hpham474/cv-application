@@ -1,0 +1,27 @@
+.sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sub-section span {
+  font-size: 0.75rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: grey;
+}
+
+.sub-section input {
+  width: 100%;
+  padding: 0 7px;
+  line-height: 1.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.sub-section input:focus {
+  outline: none;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px gray;
+}

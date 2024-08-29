@@ -1,0 +1,10 @@
+.general {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.general h2 {
+  font-size: 1.5rem;
+}
