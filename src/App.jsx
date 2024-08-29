@@ -1,5 +1,6 @@
-import "./App.css";
 import General from "./components/General";
+import Education from "./components/Education";
+import "./App.css";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="content">
         <div className="sidebar">
           <General></General>
+          <Education></Education>
         </div>
         <div className="display"></div>
       </div>
