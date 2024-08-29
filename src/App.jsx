@@ -1,5 +1,6 @@
 import General from "./components/General";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 import "./styles/App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <div className="sidebar">
           <General></General>
           <Education></Education>
+          <Experience></Experience>
         </div>
         <div className="display"></div>
       </div>
