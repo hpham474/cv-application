@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./Subsection.css";
+import "../styles/Subsection.css";
 
 function Subsection({ type, name, label }) {
   return (

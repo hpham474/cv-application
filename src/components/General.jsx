@@ -1,5 +1,5 @@
 import Subsection from "./Subsection.jsx";
-import "./General.css";
+import "../styles/General.css";
 
 function General() {
   return (

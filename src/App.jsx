@@ -1,6 +1,6 @@
 import General from "./components/General";
 import Education from "./components/Education";
-import "./App.css";
+import "./styles/App.css";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import Subsection from "./Subsection.jsx";
-import "./Education.css";
+import "../styles/Education.css";
 
 function Education() {
   return (
