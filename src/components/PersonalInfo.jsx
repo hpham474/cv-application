@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Subsection from "./Subsection.jsx";
-import "../styles/General.css";
+import "../styles/Personal.css";
 
 function PersonalInfo({ resumePersonalInfo, setResumePersonalInfo }) {
   const handleChange = (e) => {
@@ -50,7 +50,7 @@ function PersonalInfo({ resumePersonalInfo, setResumePersonalInfo }) {
 
 PersonalInfo.propTypes = {
   resumePersonalInfo: PropTypes.object.isRequired,
-  setResumePersonalInfo: PropTypes.object.isRequired,
+  setResumePersonalInfo: PropTypes.func.isRequired,
 };
 
 export default PersonalInfo;

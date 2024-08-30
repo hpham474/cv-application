@@ -1,6 +1,6 @@
 .resume {
   margin: 2rem;
-  padding: 3rem;
+  padding: 3rem 4.5rem;
   background-color: white;
   width: 100%;
 }
@@ -35,4 +35,23 @@
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
+}
+
+.educationResume {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.educationEntryResume {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+}
+
+.educationEntryResume p:nth-child(2) {
+  justify-self: center;
+}
+
+.educationEntryResume p:nth-child(3) {
+  grid-column: 1 / 3;
 }
