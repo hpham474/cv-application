@@ -1,10 +1,19 @@
-import General from "./components/General";
+import { useState } from "react";
+import PersonalInfo from "./components/PersonalInfo";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import Resume from "./components/Resume";
 import "./styles/App.css";
 
 function App() {
+  const [resumePersonalInfo, setResumePersonalInfo] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+  });
+
   return (
     <>
       <nav>
@@ -12,12 +21,17 @@ function App() {
       </nav>
       <div className="content">
         <div className="sidebar">
-          <General></General>
+          <PersonalInfo
+            resumePersonalInfo={resumePersonalInfo}
+            setResumePersonalInfo={setResumePersonalInfo}
+          ></PersonalInfo>
           <Education></Education>
           <Experience></Experience>
           <Skills></Skills>
         </div>
-        <div className="display"></div>
+        <div className="display">
+          <Resume resumePersonalInfo={resumePersonalInfo}></Resume>
+        </div>
       </div>
     </>
   );

@@ -23,4 +23,5 @@ nav h1 {
 
 .display {
   background-color: lightgray;
+  display: flex;
 }

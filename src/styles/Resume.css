@@ -1,0 +1,38 @@
+.resume {
+  margin: 2rem;
+  padding: 3rem;
+  background-color: white;
+  width: 100%;
+}
+
+.personal {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.resumeName {
+  grid-column: 1 / 4;
+  font-size: 3rem;
+}
+
+.resumeEmail {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.resumePhone {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.resumeLocation {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
