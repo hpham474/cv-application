@@ -35,6 +35,8 @@ function App() {
     },
   ]);
 
+  const [resumeSkills, setResumeSkills] = useState("");
+
   return (
     <>
       <nav>
@@ -54,13 +56,17 @@ function App() {
             experienceList={experienceList}
             setExperienceList={setExperienceList}
           ></Experience>
-          <Skills></Skills>
+          <Skills
+            resumeSkills={resumeSkills}
+            setResumeSkills={setResumeSkills}
+          ></Skills>
         </div>
         <div className="display">
           <Resume
             resumePersonalInfo={resumePersonalInfo}
             educationList={educationList}
             experienceList={experienceList}
+            resumeSkills={resumeSkills}
           ></Resume>
         </div>
       </div>

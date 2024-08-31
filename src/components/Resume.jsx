@@ -6,7 +6,12 @@ import { mdiEmailOutline } from "@mdi/js";
 import { mdiPhoneOutline } from "@mdi/js";
 import { mdiMapMarkerOutline } from "@mdi/js";
 
-function Resume({ resumePersonalInfo, educationList, experienceList }) {
+function Resume({
+  resumePersonalInfo,
+  educationList,
+  experienceList,
+  resumeSkills,
+}) {
   function checkEducationList() {
     if (educationList.length < 1) {
       return false;
@@ -33,6 +38,13 @@ function Resume({ resumePersonalInfo, educationList, experienceList }) {
       experienceList[0].startDate === "" &&
       experienceList[0].endDate === ""
     ) {
+      return false;
+    }
+    return true;
+  }
+
+  function checkSkills() {
+    if (resumeSkills === "") {
       return false;
     }
     return true;
@@ -115,6 +127,15 @@ function Resume({ resumePersonalInfo, educationList, experienceList }) {
             </div>
           ))}
         </div>
+        <div className="skillsResume">
+          {checkSkills() && (
+            <>
+              <h3>Skills</h3>
+              <hr></hr>
+            </>
+          )}
+          <p>{resumeSkills}</p>
+        </div>
       </div>
     </>
   );
@@ -124,6 +145,7 @@ Resume.propTypes = {
   resumePersonalInfo: PropTypes.object.isRequired,
   educationList: PropTypes.array.isRequired,
   experienceList: PropTypes.array.isRequired,
+  resumeSkills: PropTypes.string.isRequired,
 };
 
 export default Resume;
