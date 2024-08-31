@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 import PersonalInfo from "./components/PersonalInfo";
@@ -9,6 +10,10 @@ import Resume from "./components/Resume";
 import "./styles/App.css";
 
 function App() {
+  useEffect(() => {
+    document.title = "CV-Application";
+  }, []);
+
   const [resumePersonalInfo, setResumePersonalInfo] = useState({
     name: "",
     email: "",
