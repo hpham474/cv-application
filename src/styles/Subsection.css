@@ -11,7 +11,8 @@
   color: grey;
 }
 
-.sub-section input {
+.sub-section input,
+.sub-section textarea {
   width: 100%;
   padding: 0 7px;
   line-height: 1.75rem;
@@ -20,8 +21,14 @@
   font-size: 1rem;
 }
 
-.sub-section input:focus {
+.sub-section input:focus,
+.sub-section textarea:focus {
   outline: none;
   border: 2px solid black;
   box-shadow: 2px 2px 2px gray;
+}
+
+textarea {
+  min-height: 2rem;
+  resize: vertical;
 }

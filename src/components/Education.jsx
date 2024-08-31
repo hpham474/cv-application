@@ -52,14 +52,14 @@ function Education({ educationList, setEducationList }) {
               func={(e) => handleChange(education.id, e)}
             />
             <Subsection
-              type="date"
+              type="month"
               name="startDate"
               label="Start Date"
               value={education.startDate}
               func={(e) => handleChange(education.id, e)}
             />
             <Subsection
-              type="date"
+              type="month"
               name="endDate"
               label="End Date"
               value={education.endDate}

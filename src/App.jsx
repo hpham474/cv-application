@@ -24,6 +24,17 @@ function App() {
     },
   ]);
 
+  const [experienceList, setExperienceList] = useState([
+    {
+      id: crypto.randomUUID(),
+      role: "",
+      company: "",
+      responsiblities: "",
+      startDate: "",
+      endDate: "",
+    },
+  ]);
+
   return (
     <>
       <nav>
@@ -39,13 +50,17 @@ function App() {
             educationList={educationList}
             setEducationList={setEducationList}
           ></Education>
-          <Experience></Experience>
+          <Experience
+            experienceList={experienceList}
+            setExperienceList={setExperienceList}
+          ></Experience>
           <Skills></Skills>
         </div>
         <div className="display">
           <Resume
             resumePersonalInfo={resumePersonalInfo}
             educationList={educationList}
+            experienceList={experienceList}
           ></Resume>
         </div>
       </div>
