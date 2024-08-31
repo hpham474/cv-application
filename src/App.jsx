@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 import PersonalInfo from "./components/PersonalInfo";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
@@ -37,10 +39,39 @@ function App() {
 
   const [resumeSkills, setResumeSkills] = useState("");
 
+  async function download() {
+    try {
+      const canvas = await html2canvas(document.querySelector(".resume"));
+      const imgData = canvas.toDataURL("image/png");
+
+      const doc = new jsPDF("p", "mm", "a4");
+      const imgWidth = 210;
+      const pageHeight = 295;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      const totalPages = Math.ceil(imgHeight / pageHeight);
+
+      for (let i = 0; i < totalPages; i++) {
+        const yOffset = -i * pageHeight;
+        if (i > 0) {
+          doc.addPage();
+        }
+
+        doc.addImage(imgData, "PNG", 0, yOffset, imgWidth, imgHeight);
+      }
+
+      doc.save("resume.pdf");
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+    }
+  }
+
   return (
     <>
       <nav>
         <h1>CV Builder</h1>
+        <button className="download" onClick={download}>
+          Download
+        </button>
       </nav>
       <div className="content">
         <div className="sidebar">
