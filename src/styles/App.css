@@ -1,7 +1,7 @@
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 15fr;
+  grid-template-rows: 5rem auto;
 }
 
 nav {
